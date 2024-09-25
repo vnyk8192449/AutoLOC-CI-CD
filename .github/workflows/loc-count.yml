@@ -38,3 +38,20 @@ jobs:
           echo "Line count completed. Here are the results:"
           cat output.txt | awk '{print "File: " $2, "Lines: " $1}'
           echo "Grand Total: $GRAND_TOTAL"
+
+      # Append results to README
+      - name: Append results to README
+        run: |
+          echo "## CI/CD Line Count Results" >> README.md
+          echo "Commit: ${{ github.sha }}" >> README.md
+          echo "$(cat formatted_output.txt)" >> README.md
+          echo "" >> README.md  # Add a blank line for separation
+
+          # Commit the updated README
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add README.md
+          git commit -m "Update README with CI/CD line count results"
+          git push origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
