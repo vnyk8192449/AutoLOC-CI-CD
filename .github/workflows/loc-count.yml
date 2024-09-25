@@ -48,13 +48,16 @@ jobs:
           echo "" >> README.md  # Add a blank line for separation
           echo -e "\tCommit: ${{ github.sha }}" >> README.md
           echo "" >> README.md  # Add a blank line after commit info
+
+          # Format the output with tabs for indentation
           while read -r line; do
-            echo -e "\tFile: $line" >> README.md
+            echo -e "\t$line" >> README.md
           done < formatted_output.txt
+
           echo "" >> README.md  # Add a blank line for separation
           echo -e "\tGrand Total: $GRAND_TOTAL" >> README.md
           echo "" >> README.md  # Add a blank line for separation
-          echo -e "#####" >> README.md  # Add the delimiter at the end
+          echo -e "\t#####" >> README.md  # Add the delimiter at the end
 
           # Commit the updated README
           git config --local user.email "action@github.com"
