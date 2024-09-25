@@ -58,12 +58,12 @@ To be defined later!!!
 
 #####
 
-	Commit: 4a89ff789c04d7cf6e60ddde932b9e66dd9214db
+    Commit: 4a89ff789c04d7cf6e60ddde932b9e66dd9214db
 
-	File: ./SQL.txt ( 202)
-	File: ./.github/workflows/loc-count.yml ( 67)
-	File: ./README.md ( 59)
+    File: ./SQL.txt (202)
+    File: ./.github/workflows/loc-count.yml (67)
+    File: ./README.md (59)
 
-	Grand Total: 328
+    Grand Total: 328
 
 #####
