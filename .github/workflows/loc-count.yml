@@ -49,10 +49,8 @@ jobs:
           echo "Commit: ${{ github.sha }}" >> README.md
           echo "" >> README.md  # Add a blank line after commit info
 
-          # Format the output with tabs for indentation
-          while read -r line; do
-          echo -e "$line" >> README.md
-          done < formatted_output.txt
+          # Use awk to format the output from output.txt
+          cat output.txt | awk '{print "File: " $2, "Lines: " $1}' >> README.md
 
           echo "" >> README.md  # Add a blank line for separation
           echo "Grand Total: $GRAND_TOTAL" >> README.md
