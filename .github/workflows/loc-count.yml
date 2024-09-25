@@ -20,11 +20,13 @@ jobs:
         run: |
           echo "Counting lines in all files excluding .git directory:"
           output=$(find . -type f -not -path './.git/*' -exec wc -l {} \;)
-          echo "$output"
-          echo "::set-output name=lines::$output"  # Save output for later use
+          echo "$output" > output.txt  # Save output to a file
+          echo "lines<<EOF" >> $GITHUB_ENV
+          cat output.txt >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
 
       # Display the result in a formatted manner
       - name: Display result
         run: |
           echo "Line count completed. Here are the results:"
-          echo "${{ steps.count_lines.outputs.lines }}"
+          echo "$lines"
