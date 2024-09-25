@@ -9,18 +9,21 @@
 **2. SQL Basics**
 
 - Data Definition Language (DDL)
+
   - `CREATE`: Used to create databases, tables, indexes, etc.
   - `DROP`: Removes databases or tables.
   - `ALTER`: Modifies table structure (add/remove columns).
   - `TRUNCATE`: Removes all records from a table but keeps the structure.
 
 - Data Manipulation Language (DML)
+
   - `INSERT`: Add records to a table.
   - `SELECT`: Retrieve data from tables.
   - `UPDATE`: Modify existing records.
   - `DELETE`: Remove records from a table.
 
 - Data Control Language (DCL)
+
   - `GRANT`: Give access privileges.
   - `REVOKE`: Remove access privileges.
 
@@ -54,16 +57,19 @@
 **5. SQL Joins**
 
 - **Inner Join**: Returns records that have matching values in both tables.
+
   ```sql
   SELECT columns FROM table1 INNER JOIN table2 ON condition;
   ```
 
 - **Left Join (Left Outer Join)**: Returns all records from the left table, and the matched records from the right table.
+
   ```sql
   SELECT columns FROM table1 LEFT JOIN table2 ON condition;
   ```
 
 - **Right Join (Right Outer Join)**: Returns all records from the right table, and the matched records from the left table.
+
   ```sql
   SELECT columns FROM table1 RIGHT JOIN table2 ON condition;
   ```
@@ -88,6 +94,7 @@
 **7. Grouping and Filtering**
 
 - `GROUP BY`: Groups rows that have the same values.
+
   ```sql
   SELECT column, COUNT(*) FROM table GROUP BY column;
   ```
@@ -102,6 +109,7 @@
 **8. Subqueries**
 
 - **Single-row subquery**: Returns a single value.
+
   ```sql
   SELECT column FROM table WHERE column = (SELECT value FROM table2 WHERE condition);
   ```
@@ -116,6 +124,7 @@
 **9. Indexes**
 
 - **Creating Indexes**: Used to improve the speed of data retrieval.
+
   ```sql
   CREATE INDEX index_name ON table(column);
   ```
@@ -130,6 +139,7 @@
 **10. Views**
 
 - **Creating a View**: A virtual table based on the result of an SQL query.
+
   ```sql
   CREATE VIEW view_name AS SELECT column1, column2 FROM table WHERE condition;
   ```
@@ -170,8 +180,7 @@
 
 **14. Advanced SQL**
 
-
-- **Stored Procedures**: 
+- **Stored Procedures**:
 
   ```sql
   CREATE PROCEDURE procedure_name()
@@ -180,13 +189,13 @@
   END;
   ```
 
-- **Triggers**: 
+- **Triggers**:
 
   ```sql
   CREATE TRIGGER trigger_name BEFORE INSERT ON table_name FOR EACH ROW BEGIN -- logic END;
   ```
 
-- **Functions**: 
+- **Functions**:
 
   ```sql
   CREATE FUNCTION function_name(parameters) RETURNS return_datatype
@@ -196,8 +205,3 @@
   ```
 
 ---
-
-This structured overview can serve as your go-to reference for SQL concepts. You can easily copy this into a `.txt` file for quick revision. Let me know if you'd like to add or modify any section!
-
-
---created by Vinay💖
