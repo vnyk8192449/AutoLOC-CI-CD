@@ -29,13 +29,12 @@ jobs:
           echo "$output" > formatted_output.txt
           echo "Grand Total: $total" >> formatted_output.txt
 
-          # Save the formatted output as an environment variable for later use
-          echo "lines<<EOF" >> $GITHUB_ENV
-          cat formatted_output.txt >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
+          # Set the output as an environment variable
+          echo "lines=$(cat formatted_output.txt)" >> $GITHUB_ENV
 
       # Display the result in a formatted manner
       - name: Display result
         run: |
           echo "Line count completed. Here are the results:"
-          echo "$lines" | awk '{if ($2) {print "File: " $2, "Lines: " $1} else {print $0}}'
+          cat output.txt | awk '{print "File: " $2, "Lines: " $1}'
+          echo "Grand Total: ${{ env.lines }}"
