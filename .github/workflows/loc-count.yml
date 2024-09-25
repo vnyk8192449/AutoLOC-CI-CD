@@ -46,14 +46,14 @@ jobs:
       - name: Append results to README
         run: |
           echo "" >> README.md  # Add a blank line for separation
-          echo "Commit: ${{ github.sha }}" >> README.md
+          echo "\tCommit: ${{ github.sha }}" >> README.md
           echo "" >> README.md  # Add a blank line after commit info
 
           # Use awk to format the output from output.txt
-          cat output.txt | awk '{print "File: " $2, "Lines: " $1}' >> README.md
+          cat output.txt | awk '{print "\tFile: " $2, "(" $1,")"}' >> README.md
 
           echo "" >> README.md  # Add a blank line for separation
-          echo "Grand Total: $GRAND_TOTAL" >> README.md
+          echo "\tGrand Total: $GRAND_TOTAL" >> README.md
           echo "" >> README.md  # Add a blank line for separation
           echo "#####" >> README.md  # Add the delimiter at the end
 
