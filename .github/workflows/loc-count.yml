@@ -14,13 +14,17 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Count lines of code in .txt files using wc
-      - name: Count lines in .txt files
+      # Count lines in all files and save output to a variable
+      - name: Count lines in all files
+        id: count_lines
         run: |
-          echo "Counting lines in .txt files:"
-          find . -name "*.txt" -exec wc -l {} \;
+          echo "Counting lines in all files:"
+          output=$(find . -type f -exec wc -l {} \;)
+          echo "$output"
+          echo "::set-output name=lines::$output"  # Save output for later use
 
-      # Optionally print the result
+      # Display the result in a formatted manner
       - name: Display result
         run: |
-          echo "Line count completed."
+          echo "Line count completed. Here are the results:"
+          echo "${{ steps.count_lines.outputs.lines }}"
