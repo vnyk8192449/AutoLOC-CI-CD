@@ -47,3 +47,14 @@ The action runs automatically with each commit or pull request, providing an eas
 To be defined later!!!
 
 ## Documentation
+
+	Commit: 98b6b9f69a2a87fcf88ede77dc8422047d055fae
+
+	File: 202 ./SQL.txt
+	File: 66 ./.github/workflows/loc-count.yml
+	File: 49 ./README.md
+	File: Grand Total: 317
+
+	Grand Total: 317
+
+	#####
