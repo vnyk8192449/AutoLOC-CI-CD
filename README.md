@@ -45,3 +45,10 @@ To be defined later!!!
 
 
 
+## CI/CD Line Count Results
+Commit: a1461d8eed55480549fd9263c2f1f537c255e428
+202 ./SQL.txt
+57 ./.github/workflows/loc-count.yml
+47 ./README.md
+Grand Total: 306
+
