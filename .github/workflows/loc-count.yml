@@ -19,14 +19,14 @@ jobs:
 
       # Count lines of code, including .txt files
       - name: Count lines of code (including .txt)
-        run: cloc --include-ext=txt .
+        run: cloc --force-lang=Plain_Text --include-ext=txt --by-file .
 
       # Optionally print the result
       - name: Display result
-        run: cloc --include-ext=txt . --quiet
+        run: cloc --force-lang=Plain_Text --include-ext=txt --by-file . --quiet
 
       - name: Save LOC count artifact
-        run: cloc --include-ext=txt . --quiet --out=loc.txt
+        run: cloc --force-lang=Plain_Text --include-ext=txt --by-file . --quiet --out=loc.txt
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
