@@ -6,6 +6,9 @@ on:
       - main
   pull_request:
 
+permissions:
+  contents: write # Allow the workflow to push to the repository
+
 jobs:
   count-loc:
     runs-on: ubuntu-latest
@@ -42,10 +45,16 @@ jobs:
       # Append results to README
       - name: Append results to README
         run: |
-          echo "## CI/CD Line Count Results" >> README.md
-          echo "Commit: ${{ github.sha }}" >> README.md
-          echo "$(cat formatted_output.txt)" >> README.md
           echo "" >> README.md  # Add a blank line for separation
+          echo -e "\tCommit: ${{ github.sha }}" >> README.md
+          echo "" >> README.md  # Add a blank line after commit info
+          while read -r line; do
+            echo -e "\tFile: $line" >> README.md
+          done < formatted_output.txt
+          echo "" >> README.md  # Add a blank line for separation
+          echo -e "\tGrand Total: $GRAND_TOTAL" >> README.md
+          echo "" >> README.md  # Add a blank line for separation
+          echo -e "\t#####" >> README.md  # Add the delimiter at the end
 
           # Commit the updated README
           git config --local user.email "action@github.com"
