@@ -14,12 +14,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Count lines in all files and save output to a variable
+      # Count lines in all files excluding .git directory
       - name: Count lines in all files
         id: count_lines
         run: |
-          echo "Counting lines in all files:"
-          output=$(find . -type f -exec wc -l {} \;)
+          echo "Counting lines in all files excluding .git directory:"
+          output=$(find . -type f -not -path './.git/*' -exec wc -l {} \;)
           echo "$output"
           echo "::set-output name=lines::$output"  # Save output for later use
 
