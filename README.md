@@ -67,3 +67,13 @@ To be defined later!!!
     Grand Total: 328
 
 #####
+
+	Commit: 96130bf41fb1b790a1321291bddecfdfd6f81452
+
+	File: ./SQL.txt (202)
+	File: ./README.md (69)
+	File: ./.github/workflows/loc-count.yml (67)
+
+	Grand Total: 338
+
+#####
