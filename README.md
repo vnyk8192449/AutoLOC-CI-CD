@@ -32,7 +32,7 @@ The action runs automatically with each commit or pull request, providing an eas
 
 <br>
 
-# 📂Documentation
+# 🔄️CI/CD Line Count Results
 
     Commit: 40b8dd25c994d5788029e02e43c59f347b60e6c5
 
