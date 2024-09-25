@@ -54,7 +54,7 @@ jobs:
           echo "" >> README.md  # Add a blank line for separation
           echo -e "\tGrand Total: $GRAND_TOTAL" >> README.md
           echo "" >> README.md  # Add a blank line for separation
-          echo -e "\t#####" >> README.md  # Add the delimiter at the end
+          echo -e "#####" >> README.md  # Add the delimiter at the end
 
           # Commit the updated README
           git config --local user.email "action@github.com"
