@@ -11,27 +11,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Check out the code from the repository
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Install cloc (Count Lines of Code) tool
       - name: Install cloc
         run: sudo apt-get install -y cloc
 
-      # Count the lines of code in the repository
-      - name: Count lines of code
-        run: cloc .
+      # Count lines of code, including .txt files
+      - name: Count lines of code (including .txt)
+        run: cloc --include-ext=txt .
 
       # Optionally print the result
       - name: Display result
-        run: cloc . --quiet
+        run: cloc --include-ext=txt . --quiet
 
-      # Save the result as an artifact (optional)
       - name: Save LOC count artifact
-        run: cloc . --quiet --out=loc.txt
+        run: cloc --include-ext=txt . --quiet --out=loc.txt
 
-      # Upload the artifact to GitHub for download
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
