@@ -24,9 +24,12 @@ jobs:
 
           # Calculate grand total
           total=$(awk '{s+=$1} END {print s}' output.txt)
+
+          # Save formatted output and append the grand total
           echo "$output" > formatted_output.txt
           echo "Grand Total: $total" >> formatted_output.txt
 
+          # Save the formatted output as an environment variable for later use
           echo "lines<<EOF" >> $GITHUB_ENV
           cat formatted_output.txt >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
@@ -35,4 +38,4 @@ jobs:
       - name: Display result
         run: |
           echo "Line count completed. Here are the results:"
-          echo "$lines" | awk '{if (NF > 1) {print "File: " $2, "Lines: " $1} else {print $0}}'
+          echo "$lines" | awk '{if ($2) {print "File: " $2, "Lines: " $1} else {print $0}}'

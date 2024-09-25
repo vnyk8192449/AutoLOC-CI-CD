@@ -198,3 +198,6 @@
 ---
 
 This structured overview can serve as your go-to reference for SQL concepts. You can easily copy this into a `.txt` file for quick revision. Let me know if you'd like to add or modify any section!
+
+
+--created by Vinay💖
