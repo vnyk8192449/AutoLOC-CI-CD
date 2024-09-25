@@ -30,11 +30,11 @@ jobs:
           echo "Grand Total: $total" >> formatted_output.txt
 
           # Set the output as an environment variable
-          echo "lines=$(cat formatted_output.txt)" >> $GITHUB_ENV
+          echo "GRAND_TOTAL=$total" >> $GITHUB_ENV
 
       # Display the result in a formatted manner
       - name: Display result
         run: |
           echo "Line count completed. Here are the results:"
           cat output.txt | awk '{print "File: " $2, "Lines: " $1}'
-          echo "Grand Total: ${{ env.lines }}"
+          echo "Grand Total: $GRAND_TOTAL"
