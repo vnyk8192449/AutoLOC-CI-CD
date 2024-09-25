@@ -10,19 +10,7 @@ The action runs automatically with each commit or pull request, providing an eas
 
 ## Author
 
-- [@vkumar8192449](https://github.com/vkumar8192449)
-
-## About Author
-
-👩‍💻 All of my projects are available at [Portfolio-website](https://vkumar8192449.github.io/Portfolio-website/)
-
-👯‍♀️ I'm looking to collaborate on...
-
-⚡ Fun fact "I turns every debugging session into a cool stand-up comedy show"
-
-📫 How to reach me...
-
-    vkumar8192449@gmail.com
+- [@vkumar8192449](https://github.com/vkumar8192449)<br><br>
 
 # 💻 Current Working Stack:
 
@@ -42,11 +30,9 @@ The action runs automatically with each commit or pull request, providing an eas
 [![LeetCode](https://img.shields.io/badge/LeetCode-%23FFA116.svg?style=for-the-badge&logo=leetcode&logoColor=white)](https://www.leetcode.com/vkumar8192449)
 [![GeeksforGeeks](https://img.shields.io/badge/GeeksforGeeks-%2300C853.svg?style=for-the-badge&logo=geeksforgeeks&logoColor=white)](https://auth.geeksforgeeks.org/user/vkumar8192449/profile)
 
-## Contributing
+<br>
 
-To be defined later!!!
-
-## Documentation
+# 📂Documentation
 
     Commit: 40b8dd25c994d5788029e02e43c59f347b60e6c5
 
@@ -68,12 +54,12 @@ To be defined later!!!
 
 #####
 
-	Commit: 96130bf41fb1b790a1321291bddecfdfd6f81452
+    Commit: 96130bf41fb1b790a1321291bddecfdfd6f81452
 
-	File: ./SQL.txt (202)
-	File: ./README.md (69)
-	File: ./.github/workflows/loc-count.yml (67)
+    File: ./SQL.txt (202)
+    File: ./README.md (69)
+    File: ./.github/workflows/loc-count.yml (67)
 
-	Grand Total: 338
+    Grand Total: 338
 
 #####
