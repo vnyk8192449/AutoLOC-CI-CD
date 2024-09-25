@@ -48,76 +48,12 @@ To be defined later!!!
 
 ## Documentation
 
-    Commit: 98b6b9f69a2a87fcf88ede77dc8422047d055fae
-
-    File: 202 ./SQL.txt
-    File: 66 ./.github/workflows/loc-count.yml
-    File: 49 ./README.md
-    File: Grand Total: 317
-
-    Grand Total: 317
-
-#####
-
-    Commit: c00b8af0ce2962525ebd7a9bc22afde658a637b0
-
-    File: 202 ./SQL.txt
-    File: 66 ./.github/workflows/loc-count.yml
-    File: 60 ./README.md
-    File: Grand Total: 328
-
-    Grand Total: 328
-
-#####
-
-    Commit: 9db612e827189f3b389f6265d6c0fb8e9413d62e
-
-    202 ./SQL.txt
-    71 ./README.md
-    69 ./.github/workflows/loc-count.yml
-    Grand Total: 342
-
-    Grand Total: 342
-
-#####
-
-    Commit: f67dd5ffa6594a02f83b1d6418cd2c3eea477ee4
-
-    File: 202 ./SQL.txt
-    File: 82 ./README.md
-    File: 66 ./.github/workflows/loc-count.yml
-    File: Grand Total: 350
-
-    Grand Total: 350
-
-#####
-
-    Commit: d4cd05ec9523b253e7faa78c63abaa1e99f72b8f
+    Commit: 40b8dd25c994d5788029e02e43c59f347b60e6c5
 
     File: ./SQL.txt (202)
-    File: ./README.md Lines: 104
-    File: ./.github/workflows/loc-count.yml Lines: 67
+    File: ./README.md (113)
+    File: ./.github/workflows/loc-count.yml (67)
 
-    Grand Total: 373
-
-#####
-
-\tCommit: 0079688336b43b3a44a764f1b1f81a17bea186df
-
-	File: ./SQL.txt (202 )
-	File: ./README.md (103 )
-	File: ./.github/workflows/loc-count.yml (67 )
-
-\tGrand Total: 372
-
-#####
-
-	Commit: 40b8dd25c994d5788029e02e43c59f347b60e6c5
-
-	File: ./SQL.txt (202 )
-	File: ./README.md (113 )
-	File: ./.github/workflows/loc-count.yml (67 )
-
-	Grand Total: 382
+    Grand Total: 382
 
 #####
